@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProcessList>
+        <Process Name="paddle_server" Enable="yes">
+                <WorkPath>
+                        /opt/paddle_server_for_ai_env
+                </WorkPath>
+                <StartCmd>
+                        bash bin/start_paddle_server.sh
+                </StartCmd>
+                <StopCmd TimeOut="11">
+                </StopCmd>
+                <Matches>
+                        <Match>python3 PaddleServer.py</Match>
+                </Matches>
+                <ConsoleStdoutLog>
+                        /opt/paddle_server_for_ai_env/paddle_server.log
+                </ConsoleStdoutLog>
+                <ConsoleStderrLog>
+                        /opt/paddle_server_for_ai_env/paddle_server.log
+                </ConsoleStderrLog>
+        </Process>
+</ProcessList>

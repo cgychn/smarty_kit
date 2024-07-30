@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProcessList>
+	<Process Name="gpu_monitor" Enable="yes">
+		<WorkPath>
+			/opt/paddle_server_for_ai_env
+		</WorkPath>
+		<StartCmd>
+			bash bin/start_gpu_monitor.sh
+		</StartCmd>
+		<StopCmd TimeOut="11">
+		</StopCmd>
+		<Matches>
+			<Match>python3 -u GpuMonitor.py</Match>
+		</Matches>
+		<ConsoleStdoutLog>
+			/opt/paddle_server_for_ai_env/monitor.log
+		</ConsoleStdoutLog>
+		<ConsoleStderrLog>
+			/opt/paddle_server_for_ai_env/monitor.log
+		</ConsoleStderrLog>
+	</Process>
+</ProcessList>
